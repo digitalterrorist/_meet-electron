@@ -1,6 +1,6 @@
 // @flow
 
-import Button from '@atlaskit/button';
+// import Button from '@atlaskit/button';
 import { FieldTextStateless } from '@atlaskit/field-text';
 import { SpotlightTarget } from '@atlaskit/onboarding';
 import Page from '@atlaskit/page';
@@ -16,7 +16,7 @@ import { Onboarding, startOnboarding } from '../../onboarding';
 import { RecentList } from '../../recent-list';
 import { normalizeServerURL } from '../../utils';
 
-import { Body, Form, Header, Wrapper } from '../styled';
+import { Body, Button, Form, Header, Wrapper } from '../styled';
 
 
 type Props = {

@@ -9,6 +9,7 @@ import config from '../../config';
 import { openExternalLink } from '../../utils';
 import { version } from '../../../../package.json';
 
+
 type State = {
 
     /**
@@ -61,7 +62,6 @@ export default class HelpButton extends Component< *, State> {
             droplistOpen: !this.state.droplistOpen
         });
     }
-
     _onOpenChange: (*) => void;
 
     /**
@@ -88,17 +88,16 @@ export default class HelpButton extends Component< *, State> {
      */
     render() {
         return (
+            
             <Droplist
                 isOpen = { this.state.droplistOpen }
                 onClick = { this._onIconClick }
                 onOpenChange = { this._onOpenChange }
                 position = 'right bottom'
+                secondaryColor = 'inherit'
                 trigger = { <HelpIcon /> }>
                 <Group heading = 'Help'>
-                    <Item onActivate = { this._onTermsClick }>
-                        Terms
-                    </Item>
-                    <Item onActivate = { this._onPrivacyClick }>
+                    {/* <Item onActivate = { this._onPrivacyClick }>
                         Privacy
                     </Item>
                     <Item onActivate = { this._onSendFeedbackClick }>
@@ -109,7 +108,7 @@ export default class HelpButton extends Component< *, State> {
                     </Item>
                     <Item onActivate = { this._onSourceClick }>
                         Source
-                    </Item>
+                    </Item> */}
                     <Item>
                         Version: { version }
                     </Item>

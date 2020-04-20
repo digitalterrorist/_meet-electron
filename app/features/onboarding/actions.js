@@ -64,7 +64,8 @@ export function skipOnboarding() {
  */
 export function startOnboarding(section: string) {
     return {
-        type: START_ONBOARDING,
-        section
+        type: SKIP_ONBOARDING
+        // type: START_ONBOARDING,
+        // section
     };
 }

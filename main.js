@@ -20,6 +20,7 @@ const path = require('path');
 const URL = require('url');
 const config = require('./app/features/config');
 
+
 // We need this because of https://github.com/electron/electron/issues/18214
 app.commandLine.appendSwitch('disable-site-isolation-trials');
 
@@ -42,6 +43,9 @@ if (isDev) {
  * acidentally.
  */
 let mainWindow = null;
+
+
+
 
 /**
  * Sets the application menu. It is hidden on all platforms except macOS because
@@ -102,6 +106,10 @@ function setApplicationMenu() {
     }
 }
 
+
+
+
+
 /**
  * Opens new window with index.html(Jitsi Meet is loaded in iframe there).
  */
@@ -115,7 +123,7 @@ function createJitsiMeetWindow() {
     // Load the previous window state with fallback to defaults.
     const windowState = windowStateKeeper({
         defaultWidth: 800,
-        defaultHeight: 600
+        defaultHeight: 600,
     });
 
     // Path to root directory.
@@ -140,7 +148,9 @@ function createJitsiMeetWindow() {
         icon: path.resolve(basePath, './resources/icons/icon_512x512.png'),
         minWidth: 800,
         minHeight: 600,
+        frame: true,
         show: false,
+        titleBarStyle: 'hidden',
         webPreferences: {
             nativeWindowOpen: true,
             nodeIntegration: false,

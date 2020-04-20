@@ -116,17 +116,6 @@ class SettingsDrawer extends Component<Props, *> {
                             </form>
                         </SpotlightTarget>
                         <SpotlightTarget
-                            name = 'email-setting'>
-                            <form onSubmit = { this._onEmailFormSubmit }>
-                                <FieldText
-                                    label = 'Email'
-                                    onBlur = { this._onEmailBlur }
-                                    shouldFitContainer = { true }
-                                    type = 'text'
-                                    value = { this.props._email } />
-                            </form>
-                        </SpotlightTarget>
-                        <SpotlightTarget
                             name = 'server-setting'>
                             <ServerURLField />
                         </SpotlightTarget>

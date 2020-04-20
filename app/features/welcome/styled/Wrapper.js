@@ -3,8 +3,9 @@
 import styled from 'styled-components';
 
 export default styled.div`
-    background: #1D69D4;
+    background: linear-gradient(190deg, #15202e, #263952);
     display: flex;
     flex-direction: column;
     height: 100vh;
+    border-left: 2px solid orange;
 `;

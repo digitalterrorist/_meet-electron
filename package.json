@@ -1,9 +1,9 @@
 {
-  "name": "jitsi-meet-electron",
+  "name": "meet-electron",
   "version": "2.0.2",
-  "description": "Electron application for Jitsi Meet",
+  "description": "Electron application for _meet",
   "main": "./build/main.js",
-  "productName": "Jitsi Meet",
+  "productName": "_meet",
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
     "clean": "rm -rf node_modules build dist",
@@ -16,8 +16,8 @@
     "watch": "webpack --config ./webpack.renderer.js --mode development --watch --watch-poll"
   },
   "build": {
-    "appId": "org.jitsi.jitsi-meet",
-    "productName": "Jitsi Meet",
+    "appId": "org.digitalterrorist.meet",
+    "productName": "_meet",
     "generateUpdatesFilesForAllChannels": true,
     "files": [
       "**/*",
@@ -26,15 +26,15 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "_meet.${ext}",
       "category": "public.app-category.video",
       "darkModeSupport": true
     },
     "linux": {
-      "artifactName": "jitsi-meet-${arch}.${ext}",
+      "artifactName": "_meet-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "Jitsi Meet Desktop App",
-      "executableName": "jitsi-meet",
+      "description": "_meet Desktop App",
+      "executableName": "_meet",
       "target": [
         {
           "arch": "x64",
@@ -43,14 +43,14 @@
       ]
     },
     "win": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "_meet.${ext}",
       "target": [
         {
           "arch": [
             "ia32",
             "x64"
           ],
-          "target": "nsis"
+          "target": "portable"
         }
       ]
     },
@@ -63,16 +63,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jitsi/jitsi-meet-electron"
+    "url": "git://github.com/digitalterrorist/_meet-electron"
   },
   "keywords": [
-    "jingle",
     "webrtc",
     "xmpp",
-    "electron",
-    "jitsi-meet"
+    "electron"
   ],
-  "author": "Jitsi Team <support@jitsi.org>",
+  "author": "/dev/null <noreply@digitalterrorist.de> | Jitsi Team <support@jitsi.org>",
   "readmeFilename": "README.md",
   "license": "Apache-2.0",
   "dependencies": {
